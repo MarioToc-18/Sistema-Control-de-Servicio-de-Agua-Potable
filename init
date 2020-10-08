@@ -1,0 +1,21 @@
+
+PASOS:
+0. CUALQUIER MIGRACION SIEMPRE EJECUTAR ESTOS QUERYS EN MYSQL PHPMYADMIN
+
+DROP DATABASE IF EXISTS sisap;
+CREATE DATABASE sisap;
+USE sisap;
+
+Ingresar al proyecto en la cosola de GIT
+1. BAJAR LOS CAMBIOS DESDE EL REPOSITORIO CON EL SIGUIENTE COMANDO:
+
+git pull origin dev
+
+2. RECONFIGURACION DE ARCHIVOS CLASS siguiente comando:
+
+composer dump-autoload
+
+3. REFRESCAR LA BASE DE DATOS con el siguiente comando:
+
+php artisan migrate:refresh --seed
+
